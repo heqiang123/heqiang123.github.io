@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>利用hexo搭建自己的博客 | 路边一毛钱</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="路边一毛钱">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="路边一毛钱" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://github.com/heqiang123" class="animsition-link">heqiang</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">路边一毛钱</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/heqiang123" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="https://weibo.com/heqiangstr" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-06-17T03:25:10.435Z" itemprop="datePublished">
+          2019-06-17
+      </time>
+    
+</span>
+                <h1>利用hexo搭建自己的博客</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="个人心境"><a href="#个人心境" class="headerlink" title="个人心境"></a>个人心境</h2><p>春江潮水连海平，海上明月共潮生。 滟滟随波千万里，何处春江无月明！ 江流宛转绕芳甸，月照花林皆似霰； 空里流霜不觉飞，汀上白沙看不见。</p>
+<p>江天一色无纤尘，皎皎空中孤月轮。 江畔何人初见月？江月何年初照人？ 人生代代无穷已，江月年年望相似。 不知江月待何人，但见长江送流水。</p>
+<p>白云一片去悠悠，青枫浦上不胜愁。 谁家今夜扁舟子？何处相思明月楼？ 可怜楼上月徘徊，应照离人妆镜台。 玉户帘中卷不去，捣衣砧上拂还来。</p>
+<p>此时相望不相闻，愿逐月华流照君。 鸿雁长飞光不度，鱼龙潜跃水成文。 昨夜闲潭梦落花，可怜春半不还家。 江水流春去欲尽，江潭落月复西斜。</p>
+<p>斜月沉沉藏海雾，碣石潇湘无限路。 不知乘月几人归，落月摇情满江树。 </p>
+<h2 id="Just-do-it"><a href="#Just-do-it" class="headerlink" title="Just do it!"></a>Just do it!</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
+<li>NODE</li>
+</ul>
+<ul>
+<li>GIT</li>
+</ul>
+<p>此处各位看官可以自行去官网下载，然后傻瓜式安装就OK。传送门：<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js中文官网</a>,<a href="https://gitforwindows.org/" target="_blank" rel="noopener">windows的Git下载地址</a>。当这些环境都部署好之后，就可以开始我们的Hexo博客安装啦！</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>由于俺是个穷逼，用的是Windows，所以以下都以windows安装为例，由于我们在安装的过程中，大部分用的是npm命令，所以大家在用的过程中，如果感觉很慢，不爽，也可以使用淘宝镜像：</p>
+<p><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<h4 id="1、-安装hexo"><a href="#1、-安装hexo" class="headerlink" title="1、 安装hexo"></a>1、 安装hexo</h4><p>在git bash或者dos窗口中操作，输入以下命令：</p>
+<p><code>npm install -g hexo</code></p>
+<h4 id="2、-创建hexo文件夹"><a href="#2、-创建hexo文件夹" class="headerlink" title="2、 创建hexo文件夹"></a>2、 创建hexo文件夹</h4><p>在电脑某个地方创建一个名为hexo的文件夹（当然名字可以随便取），比如我个人的就是E:\blog\hexo，由于这个文件夹是你以后存放博客代码和文章的地方，所以也最好不要乱放，然后我们在GitBash或者dos窗口中cd到创建好的文件夹,或者直接进入创建好的文件夹，然后在文件夹中打开终端。</p>
+<h4 id="3、-初始化hexo"><a href="#3、-初始化hexo" class="headerlink" title="3、 初始化hexo"></a>3、 初始化hexo</h4><p>在上面cd到创建的文件夹后，输入以下命令</p>
+<p><code>$ hexo init</code></p>
+<p>这个命令执行的时间非常长，主要是初始化hexo博客中的文件夹，包括hexo博客内置的各种node_modules组件等等，所以耐心的稍等一下！</p>
+<p><img src="./images/cnpm.jpg" alt="image"></p>
+<p>其实到这里来说，我们的hexo博客已经做好了！不信？我们执行下面命令看看：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// cd到根目录下</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>然后我们打开浏览器，输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，是不是惊奇的发现已经完成了？</p>
+<p>等….等一下，页面怎么是英文的？？？！<br>兄dei，别慌，我们可以打开hexo目录下的themes文件夹，发现里面有一个landscape文件夹，没错，你刚才看到的默认主题就是这个名叫landscape的主题，是不是内心吐槽了一句好丑啊…..当然啊，不然我们怎么会使用其他主题呢？</p>
+<p>接下来我们发现landscape文件夹里有个languages文件夹，一看就懂，都知道这就是网站语言配置文件，好，我们进去看一下，噢~里面的zh-CN和zh-TW可不就是中文吗。其中zh-CN指的是简体中文，zh-TW（湾湾）是繁体中文，欧克。然后我们再去站点根目录（_config.yml）下，注意这里是站点根目录下的配置文件。进入里面我们把语言改成我们熟悉的语言。然后执行以下命令：</p>
+<p><code>$ hexo g &amp;&amp; hexo s</code></p>
+<p>再重新打开浏览器刷新，是不是页面语言变成中文的了(反正是变成了我最熟悉的语言，大家就按照自己的情况选择)！</p>
+<p>好吧，现在再说一下上面的hexo s hexo g是什么东西，hexo s是启动hexo服务的，而hexo g是重新生成public文件夹，那么public文件夹是什么呢？</p>
+<p>别慌，我们回头看一下hexo文件夹目录,这个里面就是生成的所有静态文件，包括html，css，js文件以及图片等，在座的各位，我不是针对谁，想必大家都知道这是什么意思。简单点来说如果在本地修改了什么文件内容，可以使用hexo g(hexo generate)命令重新生成一下public文件夹，然后再hexo s启动服务就可以看到变化了，当然hexo s(hexo serve)本身就具有在线调试的功能，如果hexo s无法刷新页面修改内容，那么使用hexo g &amp;&amp; hexo s就可以看到更改内容啦~</p>
+<p>上面就是搭建hexo博客的基本内容。</p>
+<h3 id="将Hexo博客部署到Github上"><a href="#将Hexo博客部署到Github上" class="headerlink" title="将Hexo博客部署到Github上"></a>将Hexo博客部署到Github上</h3><p>为什么要部署到Github上呢，当然是有以下原因：</p>
+<p>1、 因为Hexo博客都是静态文件，访问速度快。</p>
+<p>2、 免费方便，不用花一分钱就可以自己搭建一个自由的个人博客，并且没有服务器没有后台。</p>
+<p>3、 可以随意绑定自己的域名，并且可以一键开启HTTPS，很方便。</p>
+<p>4、 数据绝对安全，github可以恢复任意版本。</p>
+<p>5、 博客内容可以轻松打包、转移以及发布到其它平台。</p>
+<p>6、 ……</p>
+<p>所以在部署到Github之前，我们需要准备好自己的Github账号。</p>
+<h4 id="1、创建Github仓库"><a href="#1、创建Github仓库" class="headerlink" title="1、创建Github仓库"></a>1、创建Github仓库</h4><p>首先我们需要在Github上创建一个repository，注意名字必须为你的Github用户名.github.io，不能设置为其它名字，只能用这个仓库名。这样设置以后，我们在不绑定域名的前提下，可以直接使用<a href="https://heqiang123.github.io" target="_blank" rel="noopener">https://heqiang123.github.io</a>来访问自己的个人博客，这样就比较方便。</p>
+<h4 id="2、配置SSH-key"><a href="#2、配置SSH-key" class="headerlink" title="2、配置SSH key"></a>2、配置SSH key</h4><p>如果是第一次在自己的本机上使用Git上传到Github上，那么必须配置SSH key，表示Github允许这台机器有权限使用Git上传代码。<br>首先我们可以再GitBash中使用$ cd ~/.ssh来查看本机已经存在的ssh密钥，如果是第一次使用那就是显示No such file or directory啦。<br>然后输入:</p>
+<p><code>$ ssh-keygen -t rsa -C &quot;邮件地址&quot;</code></p>
+<p>上面的邮件地址就是你的Github注册邮箱地址，连续回车之后，最终会生成一个文件在C盘用户目录下面</p>
+<p>打开这个.ssh文件，里面存放了密钥，然后我们打开自己的Github个人主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key</p>
+<h4 id="3、测试是否成功"><a href="#3、测试是否成功" class="headerlink" title="3、测试是否成功"></a>3、测试是否成功</h4><p>使用如下命令：</p>
+<p><code>$ ssh -T git@github.com # 注意邮箱地址不用改</code></p>
+<p>如果提示Are you sure you want to continue connecting (yes/no)?点击yes，会显示<br>Hi Sanarous! You’ve successfully authenticated, but GitHub does not provide shell access.<br>看到这个信息就说明SSH已经配置成功！</p>
+<h4 id="4、配置Git提交的用户信息"><a href="#4、配置Git提交的用户信息" class="headerlink" title="4、配置Git提交的用户信息"></a>4、配置Git提交的用户信息</h4><p>上面配置成功后，我们就可以设置Git的全局用户信息了</p>
+<p>使用以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;heqiang123&quot; // 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email  &quot;zyyheqiang@163.com&quot; // 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
+
+<p>配置完成后以后提交代码都是使用的这个用户信息进行提交的。</p>
+<h4 id="5、将Hexo博客部署到Github上"><a href="#5、将Hexo博客部署到Github上" class="headerlink" title="5、将Hexo博客部署到Github上"></a>5、将Hexo博客部署到Github上</h4><p>首先打开hexo站点的配置文件，找到deloy并填写如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:Sanarous/Sanarous.github.io.git # 用户名改成你自己的</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>修改完配置文件后，一些急性子要注意啦，现在还没有完呢，我们还需要安装一个插件，执行以下命令：</p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>欧克欧克，接下来，就是见证奇迹的时刻：</p>
+<p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</code></p>
+<p>此时，咱们就可以在浏览器中输入<a href="https://heqiang123.github.io" target="_blank" rel="noopener">https://heqiang123.github.io</a>来访问啦！</p>
+<hr>
+<p>正如咱们在上文中说到的，hexo这个默认的主题太丑了，反正我个人是这样认为的，所以作为好学的各位，肯定跟我一样是不能容忍的，接下来，咱们就可以用更好的东西来代替它。接下来我就是拿最常用的next主题来做个例子分享，其余的，大家可以去官网搜索，传送门<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a>。</p>
+<h3 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h3><p>由于默认的主题landscape界面比较丑，所以我们可以在GitHub上转转，呦，发现了，目前在Github上star数量比较多的有Next主题、yillia主题等，Next主题基本占据了Hexo博客的半壁江山。因此我下面介绍一下Next主题的使用方式。</p>
+<p>我们在GitHub中全局搜索hexo-next，我们会发现是有两个star数量比较高的</p>
+<p>其中第一个是Next5版本的，而第二个是Next6版本的</p>
+<p>注意上面说的版本关系，在Next6版本上其实增加了很多Next5需要手动配置的东西，并且Next5已经停止维护了，如果不太喜欢自己手动去配置的话，建议使用Next6版本。当然，想了解熟悉更多的配置方法，可以用一下Next6</p>
+<h4 id="1、下载Next主题"><a href="#1、下载Next主题" class="headerlink" title="1、下载Next主题"></a>1、下载Next主题</h4><p>我们安装Next6版本的话，有两种方式：</p>
+<p>1、在GitBash中cd到博客根目录下，然后使用git clone命令将Next仓库克隆到hexo目录下的themes/next，即命令是git clone <a href="https://github.com/theme-next/hexo-theme-next.git" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next.git</a> themes/next</p>
+<p>2、直接在Github页面上选择绿色的按钮Clone or Download，点击下载zip压缩包。</p>
+<p>如果第一种方式比较慢的话，可以选择第二种方式直接下载，然后将下载好的压缩包直接放在E:\blog\hexo\themes\下面，git clone的话也是在这个下面，下载好后的名字可以任取。</p>
+<h4 id="2、设置hexo博客为Next主题"><a href="#2、设置hexo博客为Next主题" class="headerlink" title="2、设置hexo博客为Next主题"></a>2、设置hexo博客为Next主题</h4><p>在站点根目录下，即_config.yml文件中，设置以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: hexo-theme-next   #此处填入你在themes目录下的next主题文件名</span><br></pre></td></tr></table></figure>
+
+<p>注意此时的文件夹必须要在themes文件下，否则打开的页面将会是大家都不愿意看的东西——一片白</p>
+<h4 id="3、测试Next主题"><a href="#3、测试Next主题" class="headerlink" title="3、测试Next主题"></a>3、测试Next主题</h4><p>在GitBash中输入</p>
+<p><code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></p>
+<p>等待启动完成在浏览器中输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>即可查看安装好的Next主题！</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/06/18/hello-world/" style="float: left;">
+        ← 利用hexo搭建自己的博客
+    </a>
+    
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <!-- <a>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p> -->
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/heqiang123" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://weibo.com/heqiangstr" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

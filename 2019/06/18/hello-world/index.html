@@ -171,8 +171,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2019-06-17T03:25:10.435Z" itemprop="datePublished">
-          2019-06-17
+      <time datetime="2019-06-18T10:26:37.032Z" itemprop="datePublished">
+          2019-06-18
       </time>
     
 </span>
@@ -192,7 +192,7 @@
 <li>GIT</li>
 </ul>
 <p>此处各位看官可以自行去官网下载，然后傻瓜式安装就OK。传送门：<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js中文官网</a>,<a href="https://gitforwindows.org/" target="_blank" rel="noopener">windows的Git下载地址</a>。当这些环境都部署好之后，就可以开始我们的Hexo博客安装啦！</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>由于俺是个穷逼，用的是Windows，所以以下都以windows安装为例，由于我们在安装的过程中，大部分用的是npm命令，所以大家在用的过程中，如过感觉很慢，不爽，也可以使用淘宝镜像：</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>由于俺是个穷逼，用的是Windows，所以以下都以windows安装为例，由于我们在安装的过程中，大部分用的是npm命令，所以大家在用的过程中，如果感觉很慢，不爽，也可以使用淘宝镜像：</p>
 <p><code>$ npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
 <h4 id="1、-安装hexo"><a href="#1、-安装hexo" class="headerlink" title="1、 安装hexo"></a>1、 安装hexo</h4><p>在git bash或者dos窗口中操作，输入以下命令：</p>
 <p><code>npm install -g hexo</code></p>
@@ -212,21 +212,73 @@
 <p>好吧，现在再说一下上面的hexo s hexo g是什么东西，hexo s是启动hexo服务的，而hexo g是重新生成public文件夹，那么public文件夹是什么呢？</p>
 <p>别慌，我们回头看一下hexo文件夹目录,这个里面就是生成的所有静态文件，包括html，css，js文件以及图片等，在座的各位，我不是针对谁，想必大家都知道这是什么意思。简单点来说如果在本地修改了什么文件内容，可以使用hexo g(hexo generate)命令重新生成一下public文件夹，然后再hexo s启动服务就可以看到变化了，当然hexo s(hexo serve)本身就具有在线调试的功能，如果hexo s无法刷新页面修改内容，那么使用hexo g &amp;&amp; hexo s就可以看到更改内容啦~</p>
 <p>上面就是搭建hexo博客的基本内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="将Hexo博客部署到Github上"><a href="#将Hexo博客部署到Github上" class="headerlink" title="将Hexo博客部署到Github上"></a>将Hexo博客部署到Github上</h3><p>为什么要部署到Github上呢，当然是有以下原因：</p>
+<p>1、 因为Hexo博客都是静态文件，访问速度快。</p>
+<p>2、 免费方便，不用花一分钱就可以自己搭建一个自由的个人博客，并且没有服务器没有后台。</p>
+<p>3、 可以随意绑定自己的域名，并且可以一键开启HTTPS，很方便。</p>
+<p>4、 数据绝对安全，github可以恢复任意版本。</p>
+<p>5、 博客内容可以轻松打包、转移以及发布到其它平台。</p>
+<p>6、 ……</p>
+<p>所以在部署到Github之前，我们需要准备好自己的Github账号。</p>
+<h4 id="1、创建Github仓库"><a href="#1、创建Github仓库" class="headerlink" title="1、创建Github仓库"></a>1、创建Github仓库</h4><p>首先我们需要在Github上创建一个repository，注意名字必须为你的Github用户名.github.io，不能设置为其它名字，只能用这个仓库名。这样设置以后，我们在不绑定域名的前提下，可以直接使用<a href="https://heqiang123.github.io" target="_blank" rel="noopener">https://heqiang123.github.io</a>来访问自己的个人博客，这样就比较方便。</p>
+<h4 id="2、配置SSH-key"><a href="#2、配置SSH-key" class="headerlink" title="2、配置SSH key"></a>2、配置SSH key</h4><p>如果是第一次在自己的本机上使用Git上传到Github上，那么必须配置SSH key，表示Github允许这台机器有权限使用Git上传代码。<br>首先我们可以再GitBash中使用$ cd ~/.ssh来查看本机已经存在的ssh密钥，如果是第一次使用那就是显示No such file or directory啦。<br>然后输入:</p>
+<p><code>$ ssh-keygen -t rsa -C &quot;邮件地址&quot;</code></p>
+<p>上面的邮件地址就是你的Github注册邮箱地址，连续回车之后，最终会生成一个文件在C盘用户目录下面</p>
+<p>打开这个.ssh文件，里面存放了密钥，然后我们打开自己的Github个人主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key</p>
+<h4 id="3、测试是否成功"><a href="#3、测试是否成功" class="headerlink" title="3、测试是否成功"></a>3、测试是否成功</h4><p>使用如下命令：</p>
+<p><code>$ ssh -T git@github.com # 注意邮箱地址不用改</code></p>
+<p>如果提示Are you sure you want to continue connecting (yes/no)?点击yes，会显示<br>Hi Sanarous! You’ve successfully authenticated, but GitHub does not provide shell access.<br>看到这个信息就说明SSH已经配置成功！</p>
+<h4 id="4、配置Git提交的用户信息"><a href="#4、配置Git提交的用户信息" class="headerlink" title="4、配置Git提交的用户信息"></a>4、配置Git提交的用户信息</h4><p>上面配置成功后，我们就可以设置Git的全局用户信息了</p>
+<p>使用以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;heqiang123&quot; // 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email  &quot;zyyheqiang@163.com&quot; // 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>配置完成后以后提交代码都是使用的这个用户信息进行提交的。</p>
+<h4 id="5、将Hexo博客部署到Github上"><a href="#5、将Hexo博客部署到Github上" class="headerlink" title="5、将Hexo博客部署到Github上"></a>5、将Hexo博客部署到Github上</h4><p>首先打开hexo站点的配置文件，找到deloy并填写如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:Sanarous/Sanarous.github.io.git # 用户名改成你自己的</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>修改完配置文件后，一些急性子要注意啦，现在还没有完呢，我们还需要安装一个插件，执行以下命令：</p>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>欧克欧克，接下来，就是见证奇迹的时刻：</p>
+<p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</code></p>
+<p>此时，咱们就可以在浏览器中输入<a href="https://heqiang123.github.io" target="_blank" rel="noopener">https://heqiang123.github.io</a>来访问啦！</p>
+<hr>
+<p>正如咱们在上文中说到的，hexo这个默认的主题太丑了，反正我个人是这样认为的，所以作为好学的各位，肯定跟我一样是不能容忍的，接下来，咱们就可以用更好的东西来代替它。接下来我就是拿最常用的next主题来做个例子分享，其余的，大家可以去官网搜索，传送门<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a>。</p>
+<h3 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h3><p>由于默认的主题landscape界面比较丑，所以我们可以在GitHub上转转，呦，发现了，目前在Github上star数量比较多的有Next主题、yillia主题等，Next主题基本占据了Hexo博客的半壁江山。因此我下面介绍一下Next主题的使用方式。</p>
+<p>我们在GitHub中全局搜索hexo-next，我们会发现是有两个star数量比较高的</p>
+<p>其中第一个是Next5版本的，而第二个是Next6版本的</p>
+<p>注意上面说的版本关系，在Next6版本上其实增加了很多Next5需要手动配置的东西，并且Next5已经停止维护了，如果不太喜欢自己手动去配置的话，建议使用Next6版本。当然，想了解熟悉更多的配置方法，可以用一下Next6</p>
+<h4 id="1、下载Next主题"><a href="#1、下载Next主题" class="headerlink" title="1、下载Next主题"></a>1、下载Next主题</h4><p>我们安装Next6版本的话，有两种方式：</p>
+<p>1、在GitBash中cd到博客根目录下，然后使用git clone命令将Next仓库克隆到hexo目录下的themes/next，即命令是git clone <a href="https://github.com/theme-next/hexo-theme-next.git" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next.git</a> themes/next</p>
+<p>2、直接在Github页面上选择绿色的按钮Clone or Download，点击下载zip压缩包。</p>
+<p>如果第一种方式比较慢的话，可以选择第二种方式直接下载，然后将下载好的压缩包直接放在E:\blog\hexo\themes\下面，git clone的话也是在这个下面，下载好后的名字可以任取。</p>
+<h4 id="2、设置hexo博客为Next主题"><a href="#2、设置hexo博客为Next主题" class="headerlink" title="2、设置hexo博客为Next主题"></a>2、设置hexo博客为Next主题</h4><p>在站点根目录下，即_config.yml文件中，设置以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: hexo-theme-next   #此处填入你在themes目录下的next主题文件名</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>注意此时的文件夹必须要在themes文件下，否则打开的页面将会是大家都不愿意看的东西——一片白</p>
+<h4 id="3、测试Next主题"><a href="#3、测试Next主题" class="headerlink" title="3、测试Next主题"></a>3、测试Next主题</h4><p>在GitBash中输入</p>
+<p><code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></p>
+<p>等待启动完成在浏览器中输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>即可查看安装好的Next主题！</p>
+<h4 id="配置Next主题"><a href="#配置Next主题" class="headerlink" title="配置Next主题"></a>配置Next主题</h4><p>下面介绍一下如何配置Next主题的配置文件,其他的主题都是类似的。<br>首先还是打开上面下载或者克隆好的Next主题目录，即在hexo/themes/next下面，然后打开其_config.yml主题配置文件。我们一一修改。<br>由于配置文件是yml，如果对yml语法不太熟的小伙伴，注意每个配置之间都必须有空格，不然报错。如override: false，注意:后面有一个空格，所有yml语法都是这样。</p>
+<p>1、网站页脚小心心定义</p>
+<p>搜索footer，设置如下，就可以在页脚看到跳动的小心心啦</p>
+<p>2、关闭底部由hexo强力驱动</p>
+<p>还是在上面footer中，如下配置全部设置为false</p>
+<p>3、Next主题四种风格设置</p>
+<p>搜索schema，四种风格样式可以自己进行切换，喜欢哪个就选哪个吧~</p>
+<p>4、文章开启阅读更多按钮</p>
+<p>搜索auto_excerpt，默认是关闭的，也就是首页上默认显示整篇文章，而为了显示阅读更多按钮，我们可以开启这个服务。</p>
+<p>5、代码块风格设置</p>
+<p>搜索highlight_theme，可以自己修改上面 normal 、night 、 night eighties 、 night blue 、night bright风格看一下喜欢哪种。</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
+    
+    <a class="pull-right" href="/2019/06/17/hexo搭建/">
+        利用hexo搭建自己的博客 →
+    </a>
     
 </nav>
 
